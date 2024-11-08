@@ -4,9 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce Websites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./Assets/index.css" />
   </head>
   <body>
+    <nav class="bg-white border-b-2 border-blue-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 text-2xl font-bold">WIX</div>
+          <!-- Links for larger screens -->
+          <div class="hidden md:flex space-x-8">
+            <ul>
+              <li>
+                <a href="#" class="text-gray-900 hover:font-bold">Product</a>
+              </li>
+              <li class="text-gray-900 hover:font-bold"></li>
+              <li class="text-gray-900 hover:font-bold"></li>
+              <li class="text-gray-900 hover:font-bold"></li>
+              <li class="text-gray-900 hover:font-bold"></li>
+              <li class="text-gray-900 hover:font-bold"></li>
+            </ul>
+            <a href="#" class="text-gray-900 hover:font-bold">Solutions</a>
+            <a href="#" class="text-gray-900 hover:font-bold">Resources</a>
+            <a href="#" class="text-gray-900 hover:font-bold">Pricing</a>
+            <a href="#" class="text-gray-900 hover:font-bold">Wix Studio</a>
+            <a href="#" class="text-gray-900 hover:font-bold">Enterprise</a>
+          </div>
+          <!-- Action Buttons -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="#" class="text-gray-900 hover:text-blue-600">
+              <span class="text-xl">🌐</span>
+            </a>
+            <a href="#" class="text-gray-900 hover:font-bold">Log In</a>
+            <a
+              href="#"
+              class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              >Get Started</a
+            >
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="menu-btn"
+              class="text-gray-900 hover:font-bold focus:outline-none focus:ring-2 focus:ring-blue-600"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#" class="block text-gray-900 hover:font-bold">Product</a>
+          <a href="#" class="block text-gray-900 hover:font-bold">Solutions</a>
+          <a href="#" class="block text-gray-900 hover:font-bold">Resources</a>
+          <a href="#" class="block text-gray-900 hover:font-bold">Pricing</a>
+          <a href="#" class="block text-gray-900 hover:font-bold">Wix Studio</a>
+          <a href="#" class="block text-gray-900 hover:font-bold">Enterprise</a>
+          <div class="mt-4 space-y-1">
+            <a href="#" class="block text-gray-900 hover:font-bold">🌐</a>
+            <a href="#" class="block text-gray-900 hover:font-bold">Log In</a>
+            <a
+              href="#"
+              class="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-700"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
     <script src="./Assets/app.js"></script>
   </body>
 </html>
